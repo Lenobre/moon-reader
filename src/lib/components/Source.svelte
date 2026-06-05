@@ -22,9 +22,9 @@
   <div class="flex gap-3 relative z-10">
     <!-- Logo -->
     <img
-      src="https://imgs.search.brave.com/0gTyyKGte0WL-k58A__GupGBMOgXkkb8TSgsoB9BG14/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zc2wu/cHN0YXRpYy5uZXQv/c3RhdGljL3dlYy8y/MDI2MDUyMS9zbGlkZS9XRUJUT09OUHJv/ZHVjdGlvbi5wbmc_/dz0xMDAmcT0y"
+      src="https://imgs.search.brave.com/7P-yj0jahGLjyZATlyY_RSum8Tyr8fdQmTxTIXsqNqM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvMjM3/MTE4LnBuZw"
       alt="LOGO"
-      class="w-12 h-12 object-contain rounded-lg"
+      class="w-12 h-12 object-cover rounded-lg"
     />
 
     <div class="flex w-full min-w-0">

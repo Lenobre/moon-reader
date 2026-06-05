@@ -1,6 +1,8 @@
 <script>
   import AddSource from "$lib/components/AddSource.svelte";
   import Source from "$lib/components/Source.svelte";
+
+  function selectSource() {}
 </script>
 
 <div
@@ -21,6 +23,6 @@
     <Source to="/" link="https://github.com/lecndy/moon-reader" />
     <Source to="/" link="https://github.com/lecndy/moon-reader" />
     <Source to="/" link="https://github.com/lecndy/moon-reader" />
-    <AddSource onclick={() => console.log("Add source clicked")} />
+    <AddSource />
   </div>
 </div>

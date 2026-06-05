@@ -1,15 +1,27 @@
 <script lang="ts">
   import { Plus } from "@lucide/svelte";
+  import { open } from "@tauri-apps/plugin-dialog";
+  import { BaseDirectory, copyFile, mkdir } from "@tauri-apps/plugin-fs";
 
-  const {
-    onclick,
-  }: {
-    onclick?: () => void;
-  } = $props();
+  async function whenButtonClicked() {
+    const files = await open({
+      multiple: true,
+      directory: false,
+    });
+
+    if (!files || files.length === 0)
+      return console.info("No files selected for uploading");
+
+    files.forEach(async (file) => {
+      await copyFile(file, "plugins/teste", {
+        toPathBaseDir: BaseDirectory.AppData,
+      });
+    });
+  }
 </script>
 
 <button
-  {onclick}
+  onclick={whenButtonClicked}
   class="group relative bg-[#0E121A] border-2 border-dashed border-[#222838] hover:border-[#5e30b3] rounded-xl w-72 h-44 flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:shadow-[0_0_20px_-5px_#7439E8] cursor-pointer"
 >
   <!-- Subtle gradient overlay on hover -->
